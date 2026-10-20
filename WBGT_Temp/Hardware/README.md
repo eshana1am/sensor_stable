@@ -4,94 +4,93 @@ This document details the procedures used to build a Wet Bulb Globe Temperature 
 
 # Stage 1 - Preparing the PCB
 
-<p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_headers_unconnected.png" width="50%">
-</p>
-
 Create two 8-pin female headers and one 2-pin header for connecting the microcontroller to the PCB
 <p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_header_soldering.png" width="50%">
+<img src="../../img/WBGT_Temp/wbgt_headers_unconnected.png" width="50%">
 </p>
 
 Insert the headers into the corresponding holes as shown and flip over the board for soldering.
 <p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_jst_switch.png" width="50%">
+<img src="../../img/WBGT_Temp/wbgt_header_soldering.png" width="50%">
 </p>
 
 Insert a 2-pin JST connector in the "BAT IN" location for a battery and a switch into the switch position and solder.
 <p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_jst_switch_solder.png" width="50%">
+<img src="../../img/WBGT_Temp/wbgt_jst_switch.png" width="50%">
 </p>
 
 Flip over the board and solder (you may need to tape these components to the board).
 <p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_terminals.png" width="50%">
+<img src="../../img/WBGT_Temp/wbgt_jst_switch_solder.png" width="50%">
 </p>
 
 Locate five 2-pin terminals for the "thermistor", "BAT OUT, and I2C Connections.
 <p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_terminal_solder.png"  width="50%">
+<img src="../../img/WBGT_Temp/wbgt_terminals.png" width="50%">
 </p>
 
 Insert each terminal into all the labelled locations shown, with the openings facing the text on the PCB, flip over and solder.
 <p align="center">
-<img src="../../img/WBGT_Sensor/wbgt_10k_ohm.png" width="50%">
+<img src="../../img/WBGT_Temp/wbgt_terminal_solder.png"  width="50%">
 </p>
 
 Find a 10K-ohm resistor to solder into the remaining non-labelled position as shown and solder after trimming excess leads
+<p align="center">
+<img src="../../img/WBGT_Temp/wbgt_10k_ohm.png" width="50%">
+</p>
+
 
 
 
 # Stage 2 - prepare the MCU
 
-Create 2 8-pin male headers for soldering onto the MCU
-
+Create two 8-pin male headers and one 2-pin male header for soldering onto the MCU
 <p align="center">
-<img src="../../img/HTCC-AB02/MCU_header_unconnected.jpeg" width="50%">
+<img src="../../img/WBGT_Temp/wbgt_mcu_headers.png" width="50%">
 </p>
 
-Insert the headers into the bottom 8 holes of the MCU on each side (Vin through GPIO7 and VS through GPIO10). Then insert the pins into a breadboard for ease of soldering. Ensure the pins are flush with the MCU and solder.
+Insert the 8-pin male headers into the bottom 8 positions of the MCU on each side ("Vin" through "GPIO7" and "VS" through "GPIO10") and Insert the 2-pin header into the "~3" and "~2" As Shown below. 
+Confirm the correct positions by referring to the image below.
+<p align="center">
+<img src="../../img/WBGT_Temp/wbgt_mcu_headers_in_place.png" width="50%">
+</p>
 
+
+Then, insert the pins into a breadboard for ease of soldering. Ensure the pins are flush with the MCU and solder all.
 <p>
-<img src="../../img/HTCC-AB02/MCU_breadboard.jpeg" width="45%">
-<img src="../../img/HTCC-AB02/MCU_breadboard_side.jpeg" width="45%">
-</p>
+<img src="../../img/WBGT_Temp/wbgt_mcu_headers_solder" width="50%">
 
-Insert the MCU into the PCB board, ensuring the correct pins are connected.
 
+Insert the MCU into the PCB board and ensure the correct pins are connected.
 <p>
-<img src="../../img/HTCC-AB02/MCU_PCB.jpeg" width="45%">
-<img src="../../img/HTCC-AB02/MCU_PCB_side.jpeg" width="45%">
-</p>
+<img src="../../img/WBGT_Temp/wbgt_mcu_on_board" width="50%">
+
+
+
+
 
 # Stage 3 - battery assembly
-
-With the PCB switch turned off, remove the MCU and attach a 400 mAh battery to the BAT IN port.
-
+With the PCB switch to the "off" position, remove the MCU and attach a 400 mAh battery to the "BAT IN" port.
 <p align="center">
 <img src="../../img/HTCC-AB02/pcb_w_battery.jpeg" width="50%">
 </p>
 
 Insert a 2-pin JST connector into the MCU and add a 2 character board label for MCU identification.
-
 <p align="center">
 <img src="../../img/HTCC-AB02/MCU_cable.jpeg" width="50%">
 </p>
 
-Insert the other end of the JST connector into the BAT OUT port. Ensure the red wire goes into VB and the black wire goes into G.
-
+Insert the other end of the JST connector into the "BAT OUT" port. Ensure the RED wire goes into "VB" and the BLACK wire goes into "G".
 <p align="center">
 <img src="../../img/HTCC-AB02/MCU_power_pcb.jpeg" width="50%">
 </p>
 
 Reinsert the MCU into the PCB, ensure you do not damage the battery. There should be plenty of space between the MCU and the battery if inserted correctly.
-
 <p align="center">
 <img src="../../img/HTCC-AB02/Battery_inplace.jpeg" width="50%">
 </p>
 
 To test power, move the switch to the ON position. If no sketch has been uploaded to the board, it should flash RGB Testing on the LCD screen, along with different lights, then show the text below. 
-
 <p align="center">
 <img src="../../img/HTCC-AB02/Testing_power.jpeg" width="50%">
 </p>
