@@ -57,13 +57,13 @@ Confirm the correct positions by referring to the image below.
 
 
 Then, insert the pins into a breadboard for ease of soldering. Ensure the pins are flush with the MCU and solder all.
-<p>
-<img src="../../img/WBGT_Temp/wbgt_mcu_headers_solder" width="50%">
+<p align="center">
+<img src="../../img/WBGT_Temp/wbgt_mcu_headers_solder.png" width="50%">
 
 
 Insert the MCU into the PCB board and ensure the correct pins are connected.
-<p>
-<img src="../../img/WBGT_Temp/wbgt_mcu_on_board" width="50%">
+<p align="center">
+<img src="../../img/WBGT_Temp/wbgt_mcu_on_board.png" width="50%">
 
 
 
