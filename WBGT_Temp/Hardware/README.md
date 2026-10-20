@@ -1,51 +1,45 @@
 # Sensor assembly procedures
-This document details the procedures used to build a standard edition water level sensor.
+This document details the procedures used to build a Wet Bulb Globe Temperature Sensor Assembly. 
 
 
-# Stage 1 - prepare the PCB
+# Stage 1 - Preparing the PCB
 
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_raw.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_headers_unconnected.png" width="50%">
 </p>
 
-Create 2 8-pin female headers for connecting the microcontroller to the PCB
+Create two 8-pin female headers and one 2-pin header for connecting the microcontroller to the PCB
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_headers_unconnected.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_header_soldering.png" width="50%">
 </p>
 
-Insert the headers into the corresponding hole and flip over the board for soldering.
+Insert the headers into the corresponding holes as shown and flip over the board for soldering.
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_insert_header.jpeg" width="50%">
-</p>
-Solder each pin to the board.
-
-<p align="center">
-<img src="../../img/HTCC-AB02/pcb_header_finished.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_jst_switch.png" width="50%">
 </p>
 
-Insert a 2-pin JST connector in the BAT IN location and a switch into the switch position.
-
+Insert a 2-pin JST connector in the "BAT IN" location for a battery and a switch into the switch position and solder.
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_bat_switch.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_jst_switch_solder.png" width="50%">
 </p>
 
 Flip over the board and solder (you may need to tape these components to the board).
-
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_bat_switch2.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_terminals.png" width="50%">
 </p>
 
-Locate 4 2-pin terminals (5 if using the I2C connection).
-
+Locate five 2-pin terminals for the "thermistor", "BAT OUT, and I2C Connections.
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_terminals.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_terminal_solder.png"  width="50%">
 </p>
 
-Insert each terminal into the remaining locations, with the openings facing the text on the PCB, flip over and solder.
-
+Insert each terminal into all the labelled locations shown, with the openings facing the text on the PCB, flip over and solder.
 <p align="center">
-<img src="../../img/HTCC-AB02/pcb_terminals2.jpeg" width="50%">
+<img src="../../img/WBGT_sensor/wbgt_10k_ohm.png" width="50%">
 </p>
+
+Find a 10K-ohm resistor to solder into the remaining non-labelled position as shown and solder after trimming excess leads
+
 
 
 # Stage 2 - prepare the MCU
