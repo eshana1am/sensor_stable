@@ -97,119 +97,184 @@ To test power, move the switch to the ON position. If no sketch has been uploade
 
 Turn off power by moving the switch back to the OFF position.
 
-# Stage 4 - Housing preparation
+
+
+# Stage 4 - Housing Preparation
 
 <p align="center">
 <img src="../../img/ML22F/enclosure.jpeg" width="100%">
 </p>
 
-Secure the lid of the housing in a vice and, using a step-drill bit of at least 1-1/4", drill a hole of approximately 1-1/4". 
+There are a total of 11 parts that need to be 3D Printed, as shown above with preferably ASA type UV Resistant Filament
+These Include:
+    - Bottom Lid Piece with Mounting and Water Drain X 1 
+    - Bottom PCB Housing Plate X 1
+    - Middle Plates with Hollow Center Cutout X 4
+    - Top Plates with Solid Infill X 2 
+    - Top Mounting Piece x 1
+    - Top Mount with 1/2" NPT Thread & Solar Panel Mount x 1
+    - Sensor Module Mounting Piece x 1
+
+All can be printed without supports but a brim is recommended for better print stability. For better quality overall, a printer with an enclosure or a higher heat environment and dehumidification is recommended for printing with ASA Filament
  
 <p align="center">
 <img src="../../img/ML22F/enclosure_w_bit.jpeg" width="50%">
 </p>
 
-Periodically check the size by threading a sensor into the hole. Once it is large enough to thread, remove it from the vice and clean up the cut with a razor.
+Additionally, the following hardware is also needed. These can be found on McMaster-Carr 
+    - 6" 8-32 Stainless Steel 18-8 Threaded Rods X 3 (McMaster 95412A821)
+    - 8-32 Nylon 6-6 Wingnut X 6 (McMaster 94924A009)
+    - 1/2" NPT Standard Male-Female PVC Connector X 2 (McMaster 4880K61)
+    - Small #3  Screws X 2 (no more than 1/8" in length)
+    - 1/2" NPT Gland 
+    - 1/2" PVC Pipe cut to approx. 6" in length or less
+    - Hollow Aluminum sphere which can be spray painted black 
+
 
 <p>
 <img src="../../img/ML22F/hole_in_top.jpeg" width="45%">
 <img src="../../img/ML22F/sensor_in_top.jpeg" width="45%">
 </p>
 
-Secure the main housing in the vice with the opening facing away from you and drill a 1/4" hole in the right side of the housing, ~1" from the edge.
+Start by 3D Printing the Bottom Lid with Mounting, the top mounting, the solar panel mount, and the Sensor Module Mounting all at 50% Infill Density. 
+These can be printed with PLA but ASA is recommended to better resist UV deformation and warping. 
 
 <p align="center">
 <img src="../../img/ML22F/antenna_hole.jpeg" width="50%">
 </p>
 
-Flip the housing around and drill a 1/2" hole in the middle of the other side.
+Continue by Printing the Bottom PCB Housing at 50% Infill Density. 
+This should be done with ASA 
 
 <p align="center">
 <img src="../../img/ML22F/gland_hole.jpeg" width="50%">
 </p>
 
-Insert a 1/4" NPT gland into the 1/2" hole. It should be tight enough that you can get it in and secure it without the end nut.
+Print 4 Middle Plates with center cutouts at 50% Infill Density also with ASA.
 
 <p align="center">
 <img src="../../img/ML22F/gland_in_enclosure.jpeg" width="50%">
 </p>
 
-Insert the antenna cable into the 1/4" hole and secure with included nuts.
+Finally, Print 2 top plates that don't have a central cutout. 
+These must be printed with ASA at a 100% Infill Desnity 
 
 <p align="center">
 <img src="../../img/ML22F/antenna_connector_in_enclosure.jpeg" width="50%">
 </p>
 
-# Stage 5 - Ultrasonic Sensor Assembly
+To prepare the black Globe, drill/cut a 1/2" hole into an aluminum sphere 
+Once Drilling is done, spray paint the globe black using any matte black spray paint 
+<p align="center">
+<img src="../../img/ML22F/antenna_connector_in_enclosure.jpeg" width="50%">
+</p>
 
-Solder wires into the Ultrasonic sensor pins GND, V+, 5, and 4.
+Once the Sphere is dry, it can be bonded to the male end of a 1/2" NPT Connector
+
+<p align="center">
+<img src="../../img/ML22F/antenna_connector_in_enclosure.jpeg" width="50%">
+</p>
+
+Cut a 1/2" PVC Pipe down to no more than 6" in length.
+Push the remaining NPT connector Female end and the connector bonded to the globe onto the pipe 
+
+# Stage 5 - Preparing the Sensors and Solar Panel 
+
+The Sensors Needed are the SHT-45 Sensor and a simple thermistor, but a BME280 or any other temperature I2C compatible will work, as shown below.
+A solar panel for recharging the battery is also needed 
+4-conductor and 2-conductor cables are needed for the assembly
 
 <p align="center">
 <img src="../../img/US-Sensor/soldering_sensor.jpeg" width="50%">
 </p>
 
-Gently twist wires, ensuring you do not put pressure on the pins.
+Begin by soldering stripping the 4-conductor cable 
+Solder two of the wires/conductors to the "VIN" Positive and "GND" Ground Pins 
+Make note of what color wire each pin is connected to 
 
 <p align="center">
 <img src="../../img/US-Sensor/sensor_soldered.jpeg" width="50%">
 </p>
 
-Stack 2 gaskets that come with mounting hardware onto the sensor threads.
-
+Solder the remaining set of conductors for the "SCL" and "SDA" Wires for the I2C 
+Make note of these colors as well.
+Keep a generous amount of excess cable for final assembly
 <p align="center">
 <img src="../../img/US-Sensor/gaskets.jpeg" width="50%">
 </p>
 
-Insert sensor into housing top and secure with mounting nut.
+Next, take a 2-conductor cable, strip it, and solder each wire to the thermistor
+The colors/poles of these are negligible
+Keep a generous amount of excess cable for final assembly
+
 
 <p align="center">
 <img src="../../img/ML22F/housing_on_sensor.jpeg" width="50%">
 </p>
 
-Connect the wire leads to the PCB terminal. V+ - VE, GND - G, 5 - RX, 4 - G5.
-
+Using another 2-conductor cable, solder the positive and negative pads of the solar panel with generous solder
+Keep a generous amount of excess cable for final assembly
 <p align="center">
 <img src="../../img/HTCC-AB02/sensor_connected.jpeg" width="50%">
 </p>
+
 
 # Interlude - set up software
 
 If you have not done so already, this is a good time to set up the TTN connection and flash the software to the MCU. Follow the instructions [here](../Firmware/README.md).
 
-# Stage 6 - Mount all components
 
-Attach the antenna cable to the MCU.
+# Stage 6 - Mount the Electronics 
+For Final Assembly, use the hardware as metioned before 
 
 <p align="center">
 <img src="../../img/HTCC-AB02/attach_antenna_cable.jpeg" width="50%">
 </p>
 
-Insert the MCU by sliding the side with the sensor terminals under the antenna connector and pushing the opening past the gland.
+Screw in the PCB with MCU using #3 screws in the bottom PCB Holding plate and secure
 
 <p align="center">
 <img src="../../img/HTCC-AB02/insert_MCU.jpeg" width="50%">
 </p>
 
-Secure the MCU to the housing with two mounting screws.
+Remove support material on the bottom Lid mount and thread a 1/4" NPT Cable gland through the corresponding hole as shown
+The plastic nut for the gland should be in the recessed area on the inside of the plate as shown
 
 <p>
 <img src="../../img/HTCC-AB02/secure_MCU.jpeg" width="45%">
 <img src="../../img/HTCC-AB02/MCU_secured.jpeg" width="45%">
 </p>
 
-Attach a 915 MHz LoRa antenna to the antenna connector. 
-
+Thread the cables for the I2C temperature sensor, thermistor, and solar panel through the gland
+Ensure that the cables are threaded through as shown 
 <p align="center">
 <img src="../../img/HTCC-AB02/attach_antenna.jpeg" width="50%">
 </p>
 
-Ensure the antenna is connected correctly by checking the TTN console. If it is connected correctly your RSSI should increase substantially.
+Connect the Positive and negative wires from the sensor's "VIN" and "GND" pins respectively into the "V+" And "G" labelled terminals on the PCB 
 
 <p align="center">
 <img src="../../img/firmware/RSSI.png" width="100%">
 </p>
 
-# Stage 7 - prepare and mount solar panel
+Connect the SCL and SDA wires from the sensor's "SCL" and "SDA" pins respectively into the labelled terminals on the PCB 
+<p align="center">
+<img src="../../img/firmware/RSSI.png" width="100%">
+</p>
+
+Connect the positive and negative wires from the solarpanel into the "VS" and "G" Solar terminals respectively 
+<p align="center">
+<img src="../../img/firmware/RSSI.png" width="100%">
+</p>
+
+Connect both wires to the thermistor terminal as shown. Wire colors/polarity does not matter in this case
+<p align="center">
+<img src="../../img/firmware/RSSI.png" width="100%">
+</p>
+
+
+
+# Stage 7 - Full Assembly of Housing 
 
 Solder wire leads onto the back of the solar panel
 
